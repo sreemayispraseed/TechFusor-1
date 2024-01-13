@@ -28,6 +28,8 @@ jobs:
 
     - name: Deploy to GCP
       run: |
-        scp -i /path/to/private/key.pem -r $GITHUB_WORKSPACE/TechFusor/techfusor-app/* deploy@34.125.144.12:/home/deploy/TechFusor
+        echo "${PRIVATE_KEY}" > private_key.pem
+        chmod 600 private_key.pem
+        scp -i private_key.pem -r $GITHUB_WORKSPACE/TechFusor/techfusor-app/* deploy@34.125.144.12:/home/deploy/TechFusor
       env:
         PRIVATE_KEY: ${{ secrets.GCP_PRIVATE_KEY }}
