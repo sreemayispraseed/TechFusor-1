@@ -27,16 +27,10 @@ jobs:
       working-directory: techfusor-app
 
     - name: Deploy to GCP
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.GCP_HOST }}
-        username: ${{ secrets.GCP_USERNAME }}
-        key: ${{ secrets.GCP_PRIVATE_KEY }}
-        script: |
-          ssh -i ${{ secrets.GCP_PRIVATE_KEY }} ${{ secrets.GCP_USERNAME }}@${{ secrets.GCP_HOST }} 'bash -s' << 'EOF'
+      run: |
+        ssh -i ${{ secrets.GCP_PRIVATE_KEY }} ${{ secrets.GCP_USERNAME }}@${{ secrets.GCP_HOST }} 'bash -s' << 'EOF'
           cd /home/deploy/TechFusor/techfusor-app/
           sudo rm -rf *  # Remove existing files
-          sudo cp -r $HOME/TechFusor/techfusor-app/build/* .
+          sudo cp -r $GITHUB_WORKSPACE/TechFusor/techfusor-app/* .
           sudo systemctl restart nginx
           EOF
-        
