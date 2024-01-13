@@ -27,10 +27,14 @@ jobs:
       working-directory: techfusor-app
 
     - name: Deploy to GCP
-      run: |
-        ssh -i ${{ secrets.GCP_PRIVATE_KEY }} ${{ secrets.GCP_USERNAME }}@${{ secrets.GCP_HOST }} 'bash -s' << 'EOF'
+      uses: easingthemes/ssh-deploy@main
+      with:
+        host: ${{ secrets.GCP_HOST }}
+        username: ${{ secrets.GCP_USERNAME }}
+        key: ${{ secrets.GCP_PRIVATE_KEY }}
+        script: |
           cd /home/deploy/TechFusor/techfusor-app/
           sudo rm -rf *  # Remove existing files
           sudo cp -r $GITHUB_WORKSPACE/TechFusor/techfusor-app/* .
           sudo systemctl restart nginx
-          EOF
+        
