@@ -28,7 +28,6 @@ jobs:
 
     - name: Deploy to GCP
       run: |
-        ssh-keyscan -H hostname >> ~/.ssh/known_hosts
         scp -i /path/to/private/key.pem -r $GITHUB_WORKSPACE/TechFusor/techfusor-app/* deploy@34.125.144.12:/home/deploy/TechFusor
       env:
         PRIVATE_KEY: ${{ secrets.GCP_PRIVATE_KEY }}
