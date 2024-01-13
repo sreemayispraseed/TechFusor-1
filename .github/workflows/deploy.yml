@@ -22,6 +22,6 @@ jobs:
           username: ${{ secrets.GCP_USERNAME }}
           key: ${{ secrets.GCP_PRIVATE_KEY }}
           script: |
-            cd techfusor-app/
+            cd /home/deploy/TechFusor/techfusor-app
             sudo cp -r * /home/deploy/techfusor-app
             sudo systemctl restart nginx
