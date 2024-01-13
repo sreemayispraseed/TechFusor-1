@@ -2,26 +2,43 @@ name: Deploy to GCP
 
 on:
   push:
-    branches: [main]  # Trigger on pushes to the main branch
+    branches:
+      - main  # Replace with the branch you want to trigger on
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - name: Install dependencies
-        run: npm install
-        working-directory: techfusor-app  # Adjust if needed
-      - name: Build React app
-        run: npm run build
-        working-directory: techfusor-app
-      - name: Deploy to GCP instance
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.GCP_HOST }}
-          username: ${{ secrets.GCP_USERNAME }}
-          key: ${{ secrets.GCP_PRIVATE_KEY }}
-          script: |
-            cd /home/deploy/TechFusor/techfusor-app
-            sudo cp -r * /home/deploy/techfusor-app
-            sudo systemctl restart nginx
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Install Node.js and npm
+      uses: actions/setup-node@v4
+      with:
+        node-version: 16
+
+    - name: Install dependencies
+      run: npm install
+      working-directory: TechFusor/techfusor-app  # Adjust if needed
+
+    - name: Build React app
+      run: npm run build
+      working-directory: TechFusor/techfusor-app
+
+    - name: Deploy to GCP
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.GCP_HOST }}
+        username: ${{ secrets.GCP_USERNAME }}
+        key: ${{ secrets.GCP_PRIVATE_KEY }}
+        script: |
+          cd /home/deploy/TechFusor/techfusor-app/
+          sudo rm -rf *  # Remove existing files
+          sudo cp -r $GITHUB_WORKSPACE/TechFusor/techfusor-app/build/* .
+          sudo systemctl restart nginx
+        port: 22
+        timeout: 30s
+        command_timeout: 10m
+        proxy_port: 22
+        proxy_timeout: 30s
