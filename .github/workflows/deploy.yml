@@ -26,15 +26,11 @@ jobs:
       run: npm run build
       working-directory: techfusor-app
 
+    - name: Setup SSH agent
+      uses: webfactory/ssh-agent@v0.5.1
+      with:
+        ssh-private-key: ${{ secrets.GCP_PRIVATE_KEY }}
+
     - name: Deploy to GCP
       run: |
-        echo "${PRIVATE_KEY}" > private_key.pem
-        chmod 600 private_key.pem
-
-        # Add host key to known_hosts
-        ssh-keyscan -H 34.125.144.12 >> ~/.ssh/known_hosts
-
-        # Run the scp command
-        scp -i private_key.pem -r $GITHUB_WORKSPACE/TechFusor/techfusor-app/* deploy@34.125.144.12:/home/deploy/TechFusor
-      env:
-        PRIVATE_KEY: ${{ secrets.GCP_PRIVATE_KEY }}
+        scp -r $GITHUB_WORKSPACE/TechFusor/techfusor-app/* deploy@34.125.144.12:/home/deploy/TechFusor
