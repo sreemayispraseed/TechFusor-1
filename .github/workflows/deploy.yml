@@ -26,11 +26,14 @@ jobs:
       run: npm run build
       working-directory: techfusor-app
 
-    - name: Setup SSH agent
-      uses: webfactory/ssh-agent@v0.5.1
-      with:
-        ssh-private-key: ${{ secrets.GCP_PRIVATE_KEY }}
-
     - name: Deploy to GCP
-      run: |
-        scp -r $GITHUB_WORKSPACE/TechFusor/techfusor-app/* deploy@34.125.144.12:/home/deploy/TechFusor
+      uses: easingthemes/ssh-deploy@main
+      with:
+         SSH_PRIVATE_KEY: ${{ secrets.GCP_PRIVATE_KEY }}
+         REMOTE_HOST: ${{ secrets.GCP_HOST }}
+         REMOTE_USER: ${{ secrets.GCP_USERNAME }}
+         SCRIPT_BEFORE: |
+            cd /home/deploy/TechFusor/techfusor-app/
+            sudo rm -rf *  # Remove existing files
+            sudo cp -r $GITHUB_WORKSPACE/TechFusor/techfusor-app/* .
+            sudo systemctl restart nginx
