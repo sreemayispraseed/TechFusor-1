@@ -27,13 +27,8 @@ jobs:
       working-directory: techfusor-app
 
     - name: Deploy to GCP
-      uses: easingthemes/ssh-deploy@main
-      with:
-        SSH_PRIVATE_KEY: ${{ secrets.GCP_PRIVATE_KEY }}
-        REMOTE_HOST: ${{ secrets.GCP_HOST }}
-        REMOTE_USER: ${{ secrets.GCP_USERNAME }}
-        SCRIPT_BEFORE: |
-           cd /home/deploy/TechFusor/techfusor-app/
-           sudo rm -rf *  # Remove existing files
-           sudo cp -r $GITHUB_WORKSPACE/TechFusor/techfusor-app/* .
-           sudo systemctl restart nginx
+      run: |
+        ssh-keyscan -H hostname >> ~/.ssh/known_hosts
+        scp -i /path/to/private/key.pem -r $GITHUB_WORKSPACE/TechFusor/techfusor-app/* deploy@34.125.144.12:/home/deploy/TechFusor
+      env:
+        PRIVATE_KEY: ${{ secrets.GCP_PRIVATE_KEY }}
