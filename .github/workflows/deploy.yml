@@ -20,11 +20,11 @@ jobs:
 
     - name: Install dependencies
       run: npm install
-      working-directory: TechFusor/techfusor-app  # Adjust if needed
+      working-directory: techfusor-app  # Adjust if needed
 
     - name: Build React app
       run: npm run build
-      working-directory: TechFusor/techfusor-app
+      working-directory: techfusor-app
 
     - name: Deploy to GCP
       uses: appleboy/ssh-action@master
@@ -35,7 +35,7 @@ jobs:
         script: |
           cd /home/deploy/TechFusor/techfusor-app/
           sudo rm -rf *  # Remove existing files
-          sudo cp -r $GITHUB_WORKSPACE/TechFusor/techfusor-app/build/* .
+          sudo cp -r $GITHUB_WORKSPACE/TechFusor/techfusor-app/* .
           sudo systemctl restart nginx
         port: 22
         timeout: 30s
