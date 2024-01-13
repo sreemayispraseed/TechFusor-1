@@ -1,0 +1,25 @@
+name: Deploy to GCP
+
+on:
+  push:
+    branches: [main]  # Trigger on pushes to the main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install dependencies
+        run: npm install
+      - name: Build React app
+        run: npm run build
+      - name: Deploy to GCP instance
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.GCP_HOST }}
+          username: ${{ secrets.GCP_USERNAME }}
+          key: ${{ secrets.GCP_PRIVATE_KEY }}
+          script: |
+            cd TechFosor/techfusor-app/
+            sudo cp -r * /home/deploy/techfusor-app
+            sudo systemctl restart nginx
