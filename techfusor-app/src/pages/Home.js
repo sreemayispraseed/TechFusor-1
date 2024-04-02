@@ -1,12 +1,16 @@
 import React from "react";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import bg2 from "../assets-n/img/photos/bg38.jpg";
+import bg1 from "../assets-n/img/photos/bg37.jpg";
 
 function Home() {
   return (
     <div>
       <Header />
-      <section className="wrapper image-wrapper bg-cover bg-image bg-xs-none bg-gray">
+      <section
+        className="wrapper image-wrapper bg-cover bg-image bg-xs-none bg-gray"
+        style={{ backgroundImage: `url(${bg1})` }}>
         <div className="container pt-17 pb-15 py-sm-17 py-xxl-20">
           <div className="row">
             <div className="col-md-12  text-center text-sm-start">
@@ -47,7 +51,7 @@ function Home() {
               <div className="d-flex flex-row">
                 <div>
                   <img
-                    src="assets/img/icons/lineal/telephone-3.svg"
+                    src=""
                     className="svg-inject icon-svg icon-svg-md text-blue me-5 mt-1"
                     alt=""
                   />
@@ -66,7 +70,7 @@ function Home() {
               <div className="d-flex flex-row">
                 <div>
                   <img
-                    src="assets/img/icons/lineal/shield.svg"
+                    src=""
                     className="svg-inject icon-svg icon-svg-md text-yellow me-5 mt-1"
                     alt=""
                   />
@@ -163,7 +167,7 @@ function Home() {
       <section className="wrapper bg-gray position-relative min-vh-60 d-lg-flex align-items-center">
         <div
           className="col-lg-6 position-lg-absolute top-0 start-0 image-wrapper bg-image bg-cover h-100"
-          data-image-src="assets/img/photos/bg38.jpg">
+          style={{ backgroundImage: `url(${bg2})` }}>
           <div className="divider text-gray divider-v-end d-none d-lg-block">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 1200">
               <g />
@@ -192,7 +196,7 @@ function Home() {
                 <div className="d-flex flex-row mb-5">
                   <div>
                     <img
-                      src="./assets/img/icons/lineal/light-bulb.svg"
+                      src="assets/img/icons/lineal/light-bulb.svg"
                       className="svg-inject icon-svg icon-svg-md text-blue me-5 mt-1"
                       alt=""
                     />
