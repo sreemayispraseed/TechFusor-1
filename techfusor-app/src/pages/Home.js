@@ -3,13 +3,13 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import bg2 from "../assets-n/img/photos/bg38.jpg";
 import bg1 from "../assets-n/img/photos/bg37.jpg";
-
+import "../style/global.css";
 function Home() {
   return (
     <div>
       <Header />
       <section
-        className="wrapper image-wrapper bg-cover bg-image bg-xs-none bg-gray"
+        className="wrapper image-wrapper bg-cover bg-image bg-xs-none bg-gray bg-sec"
         style={{ backgroundImage: `url(${bg1})` }}>
         <div className="container pt-17 pb-15 py-sm-17 py-xxl-20">
           <div className="row">
@@ -167,21 +167,7 @@ function Home() {
       <section className="wrapper bg-gray position-relative min-vh-60 d-lg-flex align-items-center">
         <div
           className="col-lg-6 position-lg-absolute top-0 start-0 image-wrapper bg-image bg-cover h-100"
-          style={{ backgroundImage: `url(${bg2})` }}>
-          <div className="divider text-gray divider-v-end d-none d-lg-block">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 1200">
-              <g />
-              <g>
-                <g>
-                  <polygon
-                    fill="currentColor"
-                    points="48 0 0 0 48 1200 54 1200 54 0 48 0"
-                  />
-                </g>
-              </g>
-            </svg>
-          </div>
-        </div>
+          style={{ backgroundImage: `url(${bg2})` }}></div>
 
         <div className="container">
           <div className="row gx-0">

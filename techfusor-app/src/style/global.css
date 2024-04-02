@@ -1,0 +1,17 @@
+.bg-sec {
+  height: 100vh;
+}
+.dropdown-item {
+  font-weight: 500;
+  color: #000;
+}
+
+.navbar-expand-lg.navbar-light
+  .dropdown:not(.dropdown-submenu)
+  > .dropdown-toggle:after {
+  color: #000;
+}
+
+.dropdown-item:hover {
+  color: var(--bs-nav-link-hover-color);
+}
