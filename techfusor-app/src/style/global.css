@@ -15,3 +15,6 @@
 .dropdown-item:hover {
   color: var(--bs-nav-link-hover-color);
 }
+.bg-overlay:before {
+  background: rgba(30, 34, 40, 0.4);
+}

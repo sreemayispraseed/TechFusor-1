@@ -4,88 +4,88 @@ import { SocialIcon } from "react-social-icons";
 function footer() {
   return (
     <div>
-      <footer class="bg-gray">
+      <footer class="bg-dark text-inverse">
         <div class="container py-13 py-md-15">
-          <div class="d-lg-flex flex-row align-items-lg-center">
-            <h3 class="display-3 ls-sm mb-6 mb-lg-0 pe-lg-20 pe-xl-22 pe-xxl-25">
-              Join our community by using our services and grow your business.
-            </h3>
-            <a href="#" class="btn btn-lg btn-primary rounded mb-0 text-nowrap">
-              Try It For Free
-            </a>
-          </div>
-
-          <hr class="mt-11 mb-12" />
           <div class="row gy-6 gy-lg-0">
-            <div class="col-md-4 col-lg-3">
+            <div class="col-lg-4">
               <div class="widget">
-                <img
+                TechFusor
+                {/* <img
                   class="mb-4"
-                  src="./assets/img/logo-dark.png"
-                  srcset="./assets/img/logo-dark@2x.png 2x"
+                  src="./assets/img/logo-light.png"
+                  srcset="./assets/img/logo-light@2x.png 2x"
                   alt=""
-                />
-                <p class="mb-4">
-                  © 2022 Sandbox. <br class="d-none d-lg-block" />
-                  All rights reserved.
-                </p>
-                <nav class="nav social social-muted">
-                  <a href="#"></a>
+                /> */}
+                <p class="mb-4">© 2024 TechFusor. All rights reserved.</p>
+                <nav class="nav social social-white">
                   <a href="#">
+                    <i class="uil uil-twitter"></i>
+                  </a>
+                  {/* <a href="#">
                     <i class="uil uil-facebook-f"></i>
+                  </a> */}
+                  <a href="#">
+                    <i class="uil uil-github"></i>
                   </a>
                   <a href="#">
-                    <i class="uil uil-dribbble"></i>
+                    <i class="uil uil-linkedin"></i>
                   </a>
                   <a href="#">
-                    <i class="uil uil-instagram"></i>
-                  </a>
-                  <a href="#">
-                    <i class="uil uil-youtube"></i>
+                    <i class="uil uil-discord"></i>
                   </a>
                 </nav>
               </div>
             </div>
 
-            <div class="col-md-4 col-lg-3">
+            <div class="col-md-4 col-lg-2 offset-lg-2">
               <div class="widget">
-                <h4 class="widget-title ls-sm mb-3">Get in Touch</h4>
-                <address class="pe-xl-15 pe-xxl-17">
-                  Moonshine St. 14/05 Light City, London, United Kingdom
-                </address>
-                <a href="mailto:#" class="link-body">
-                  techfusor@gmail.com
-                </a>
-              </div>
-            </div>
-
-            <div class="col-md-4 col-lg-3">
-              <div class="widget">
-                <h4 class="widget-title ls-sm mb-3">Learn More</h4>
-                <ul class="list-unstyled text-reset mb-0">
+                <h4 class="widget-title mb-3 text-white">Need Help?</h4>
+                <ul class="list-unstyled mb-0">
                   <li>
-                    <a href="#">About Us</a>
+                    <a href="#">Support</a>
                   </li>
                   <li>
-                    <a href="#">Our Story</a>
+                    <a href="#">Get Started</a>
                   </li>
                   <li>
-                    <a href="#">Projects</a>
+                    <a href="#">Terms of Use</a>
                   </li>
                   <li>
-                    <a href="#">Contact Us</a>
+                    <a href="#">Privacy Policy</a>
                   </li>
                 </ul>
               </div>
             </div>
 
-            <div class="col-md-12 col-lg-3">
+            <div class="col-md-4 col-lg-2">
               <div class="widget">
-                <h4 class="widget-title ls-sm mb-3">Our Newsletter</h4>
-                <p class="mb-5">
-                  Subscribe to our newsletter to get our news & deals delivered
-                  to you.
-                </p>
+                <h4 class="widget-title mb-3 text-white">Learn More</h4>
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="#">About Us</a>
+                  </li>
+                  <li>
+                    <a href="#">Our Team</a>
+                  </li>
+
+                  <li>
+                    <a href="#">Blog</a>
+                  </li>
+                  <li>
+                    <a href="#">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-lg-2">
+              <div class="widget">
+                <h4 class="widget-title  text-white">Get in Touch</h4>
+                <address>
+                  Moonshine St. 14/05 Light City, London, United Kingdom
+                </address>
+                <a href="mailto:techfusor@gmail.com">techfusor@gmail.com</a>
+                <br /> 00 (123) 456 78 90
               </div>
             </div>
           </div>
