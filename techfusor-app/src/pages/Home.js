@@ -2,8 +2,10 @@ import React from "react";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import bg2 from "../assets-n/img/photos/bg38.jpg";
-
+import Teams from "../components/teams";
 import "../style/global.css";
+
+import swiper from "../components/swiper";
 function Home() {
   return (
     <div>
@@ -14,13 +16,15 @@ function Home() {
           style={{ backgroundImage: `url(${bg2})` }}>
           <div className="container h-100">
             <div className="row h-100">
-              <div className="col-md-10 offset-md-1 col-lg-7 offset-lg-0 col-xl-6 col-xxl-5 text-center text-lg-start justify-content-center align-self-center align-items-start">
+              <div className="col-md-10 col-lg-7 offset-md-1  offset-lg-0  text-center text-lg-start justify-content-center align-self-center align-items-start">
                 <h2 className="display-1 fs-56 mb-4 text-white animate__animated animate__slideInDown animate__delay-1s">
-                  We bring solutions to make life easier.
+                  Welcome to TechFusor - Where Tech Minds Unite!
                 </h2>
                 <p className="lead fs-23 lh-sm mb-7 text-white animate__animated animate__slideInRight animate__delay-2s">
-                  We are a creative company that focuses on long term
-                  relationships with customers.
+                  Welcome to TechFusor, your go-to spot for all things tech and
+                  community vibes. Whether you're a DevOps ninja, a coding
+                  wizard, a UI/UX design maestro, or just love tinkering with
+                  technology, you're in the right place.
                 </p>
                 <div className="animate__animated animate__slideInUp animate__delay-3s">
                   <a
@@ -239,6 +243,7 @@ function Home() {
               className="shape rounded-circle bg-line red rellax w-16 h-16"
               data-rellax-speed="1"
               style={{ top: "0.5rem", left: "-1.7rem" }}></div>
+
             <div
               className="swiper-container dots-closer mb-6"
               data-margin="0"
@@ -250,35 +255,14 @@ function Home() {
               <div className="swiper">
                 <div className="swiper-wrapper">
                   <div className="swiper-slide">
-                    <div className="item-inner">
-                      <div className="card">
-                        <div className="card-body">
-                          <img
-                            className="rounded-circle w-15 mb-4"
-                            src="./assets/img/avatars/te1.jpg"
-                            srcSet="./assets/img/avatars/te1@2x.jpg 2x"
-                            alt=""
-                          />
-                          <h4 className="mb-1">Coriss Ambady</h4>
-                          <div className="meta mb-2">Financial Analyst</div>
-                          <p className="mb-2">
-                            Fermentum massa justo sit amet risus morbi leo.
-                          </p>
-                          <nav className="nav social mb-0">
-                            <a href="#">
-                              <i className="uil uil-twitter"></i>
-                            </a>
-                            <a href="#">
-                              <i className="uil uil-facebook-f"></i>
-                            </a>
-                            <a href="#">
-                              <i className="uil uil-dribbble"></i>
-                            </a>
-                          </nav>
-                        </div>
-                      </div>
-                    </div>
+                    <Teams
+                      teamImage={"./assets/img/avatars/te1.jpg"}
+                      name={"Team 1"}
+                      position={"Developer"}
+                      description={"Lorem ipsum dolor sit "}
+                    />
                   </div>
+
                   {/* More swiper-slide elements */}
                 </div>
               </div>
