@@ -5,14 +5,25 @@ import bg2 from "../assets-n/img/photos/bg38.jpg";
 import Teams from "../components/teams";
 import "../style/global.css";
 
-import swiper from "../components/swiper";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 function Home() {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  };
   return (
     <div>
       <Header />
       <section className="wrapper bg-dark ">
         <div
-          className=" bg-overlay bg-overlay-400 bg-dark bg-image bg-sec"
+          className="wrapper image-wrapper bg-cover bg-image bg-overlay bg-overlay-500 bg-sec"
           style={{ backgroundImage: `url(${bg2})` }}>
           <div className="container h-100">
             <div className="row h-100">
@@ -40,7 +51,7 @@ function Home() {
       </section>
       <section className="wrapper bg-light angled lower-end">
         <div className="container py-14 py-md-16">
-          <div className="row gx-lg-8 gx-xl-12 gy-10 mb-14 mb-md-17 align-items-center">
+          <div className="row gx-lg-8 gx-xl-12 gy-10 mb-14  align-items-center">
             <div className="col-lg-6 position-relative order-lg-2">
               <div
                 className="shape bg-dot primary rellax w-16 h-20"
@@ -136,7 +147,7 @@ function Home() {
                 alt=""
               />
               <h2 className="display-4 mb-4 px-lg-14">
-                Here are 3 working steps to organize our business projects.
+                Check Out Our Projects
               </h2>
             </div>
           </div>
@@ -195,10 +206,11 @@ function Home() {
               </div>
             </div>
             <div className="col-lg-6">
-              <h2 className="display-6 mb-3">How It Works?</h2>
+              <h2 className="display-6 mb-3">Dive into the Tech Wonderland</h2>
               <p className="lead fs-lg pe-lg-5">
-                Find out everything you need to know and more about how we
-                create our business process models.
+                Explore a variety of projects that cover everything from coding
+                wonders to UI/UX masterpieces. We've got it all, and we want you
+                to be a part of the magic
               </p>
               <p>
                 Aenean eu leo quam. Pellentesque ornare sem lacinia quam
@@ -221,7 +233,7 @@ function Home() {
       </section>
 
       <section className="wrapper bg-light">
-        <div className="container py-14 py-md-16">
+        <div className="container pb-14 pb-md-16">
           <div className="row mb-3">
             <div className="col-md-10 col-xl-9 col-xxl-7 mx-auto text-center">
               <img
@@ -229,44 +241,45 @@ function Home() {
                 className="svg-inject icon-svg icon-svg-md mb-4"
                 alt=""
               />
-              <h2 className="display-4 mb-3 px-lg-14">
-                Save your time and money by choosing our professional team.
-              </h2>
+              <h2 className="display-4 mb-3 px-lg-14">Our Team</h2>
             </div>
           </div>
           <div className="position-relative">
-            <div
-              className="shape rounded-circle bg-soft-yellow rellax w-16 h-16"
-              data-rellax-speed="1"
-              style={{ bottom: "0.5rem", right: "-1.7rem" }}></div>
-            <div
-              className="shape rounded-circle bg-line red rellax w-16 h-16"
-              data-rellax-speed="1"
-              style={{ top: "0.5rem", left: "-1.7rem" }}></div>
-
-            <div
-              className="swiper-container dots-closer mb-6"
-              data-margin="0"
-              data-dots="true"
-              data-items-xxl="4"
-              data-items-lg="3"
-              data-items-md="2"
-              data-items-xs="1">
-              <div className="swiper">
-                <div className="swiper-wrapper">
-                  <div className="swiper-slide">
-                    <Teams
-                      teamImage={"./assets/img/avatars/te1.jpg"}
-                      name={"Team 1"}
-                      position={"Developer"}
-                      description={"Lorem ipsum dolor sit "}
-                    />
-                  </div>
-
-                  {/* More swiper-slide elements */}
-                </div>
+            <Slider {...settings}>
+              <div>
+                <Teams
+                  teamImage={"./assets/img/avatars/te1.jpg"}
+                  name={"Team 1"}
+                  position={"Developer"}
+                  description={"Lorem ipsum dolor sit "}
+                />
               </div>
-            </div>
+              <div>
+                <Teams
+                  teamImage={"./assets/img/avatars/te1.jpg"}
+                  name={"Team 1"}
+                  position={"Developer"}
+                  description={"Lorem ipsum dolor sit "}
+                />
+              </div>
+
+              <div>
+                <Teams
+                  teamImage={"./assets/img/avatars/te1.jpg"}
+                  name={"Team 1"}
+                  position={"Developer"}
+                  description={"Lorem ipsum dolor sit "}
+                />
+              </div>
+              <div>
+                <Teams
+                  teamImage={"./assets/img/avatars/te1.jpg"}
+                  name={"Team 1"}
+                  position={"Developer"}
+                  description={"Lorem ipsum dolor sit "}
+                />
+              </div>
+            </Slider>
           </div>
         </div>
       </section>

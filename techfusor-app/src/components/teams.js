@@ -8,6 +8,7 @@ function teams({
   twitter,
   facebook,
   instagram,
+  linkedin,
 }) {
   return (
     <div>
@@ -21,6 +22,9 @@ function teams({
             <nav className="nav social mb-0">
               <a href={twitter}>
                 <i className="uil uil-twitter"></i>
+              </a>
+              <a href={linkedin}>
+                <i className="uil uil-linkedin"></i>
               </a>
               <a href={facebook}>
                 <i className="uil uil-facebook-f"></i>

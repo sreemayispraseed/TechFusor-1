@@ -26,7 +26,7 @@ function header() {
           </div>
           <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
             <div class="offcanvas-header d-lg-none">
-              <h3 class="text-white fs-30 mb-0">Sandbox</h3>
+              <h3 class="text-white fs-30 mb-0">TechFusor</h3>
               <button
                 type="button"
                 class="btn-close btn-close-white"
@@ -40,7 +40,7 @@ function header() {
                     class="nav-link dropdown-toggle"
                     href="#"
                     data-bs-toggle="dropdown">
-                    About-Us
+                    About Us
                   </a>
                 </li>
                 <li class="nav-item dropdown">
@@ -179,7 +179,7 @@ function header() {
                 </li>
               </ul>
 
-              <div class="offcanvas-footer d-lg-none">
+              {/* <div class="offcanvas-footer d-lg-none">
                 <div>
                   <a href="mailto:first.last@email.com" class="link-inverse">
                     info@email.com
@@ -203,11 +203,11 @@ function header() {
                     </a>
                   </nav>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 
-          <div class="navbar-other w-100 d-flex ms-auto">
+          {/* <div class="navbar-other w-100 d-flex ms-auto">
             <ul class="navbar-nav flex-row align-items-center ms-auto">
               <li class="nav-item">
                 <a
@@ -231,7 +231,7 @@ function header() {
                 </button>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
       </nav>
 
