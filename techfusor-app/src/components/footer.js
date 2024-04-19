@@ -24,13 +24,13 @@ function footer() {
                   {/* <a href="#">
                     <i class="uil uil-facebook-f"></i>
                   </a> */}
-                  <a href="#">
+                  <a href="https://github.com/TechFusor" target="_blank">
                     <i class="uil uil-github"></i>
                   </a>
                   <a href="#">
                     <i class="uil uil-linkedin"></i>
                   </a>
-                  <a href="#">
+                  <a href="https://discord.gg/SjHYaSw2" target="_blank">
                     <i class="uil uil-discord"></i>
                   </a>
                 </nav>
