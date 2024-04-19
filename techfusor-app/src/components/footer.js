@@ -19,29 +19,15 @@ function footer() {
                   Join the Community
                 </h3>
                 <p class="lead mb-5">
-                  Let's make something great together. We are trusted by over
-                  5000+ clients. Join them by using our services and grow your
-                  business.
+                  Our tech-loving community is buzzing with discussions,
+                  projects, and good vibes. Jump into the conversation on our
+                  Discord server: [Discord Channel URL]. We're not just a
+                  community; we're a squad of tech pals ready to share
+                  knowledge, collaborate on projects, and geek out together.
                 </p>
                 <a href="#" class="btn  btn-primary rounded-pill">
                   Join Us
                 </a>
-                <p class="mb-4">© 2024 TechFusor. All rights reserved.</p>
-                <nav class="nav social social-white">
-                  <a href="#">
-                    <i class="uil uil-twitter"></i>
-                  </a>
-
-                  <a href="#">
-                    <i class="uil uil-github"></i>
-                  </a>
-                  <a href="#">
-                    <i class="uil uil-linkedin"></i>
-                  </a>
-                  <a href="#">
-                    <i class="uil uil-discord"></i>
-                  </a>
-                </nav>
               </div>
             </div>
 
@@ -97,10 +83,25 @@ function footer() {
               </div>
             </div>
           </div>
-          <hr class="mt-13 mt-md-15 mb-7" />
+          <hr class="mt-13 mt-md-10 mb-5" />
           <div class="d-md-flex align-items-center justify-content-between">
-            <p class="mb-2 mb-lg-0">© 2022 Sandbox. All rights reserved.</p>
-            <nav class="nav social  text-md-end">
+            <p class="mb-4">© 2024 TechFusor. All rights reserved.</p>
+            <nav class="nav social social-white">
+              <a href="#">
+                <i class="uil uil-twitter"></i>
+              </a>
+
+              <a href="#">
+                <i class="uil uil-github"></i>
+              </a>
+              <a href="#">
+                <i class="uil uil-linkedin"></i>
+              </a>
+              <a href="#">
+                <i class="uil uil-discord"></i>
+              </a>
+            </nav>
+            {/* <nav class="nav social  text-md-end">
               <a href="#">
                 <i class="uil uil-twitter"></i>
               </a>
@@ -116,7 +117,7 @@ function footer() {
               <a href="#">
                 <i class="uil uil-youtube"></i>
               </a>
-            </nav>
+            </nav> */}
           </div>
         </div>
       </footer>
