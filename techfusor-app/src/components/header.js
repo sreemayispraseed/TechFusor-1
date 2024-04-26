@@ -38,7 +38,7 @@ function header() {
                 <li class="nav-item dropdown dropdown-mega">
                   <a
                     class="nav-link dropdown-toggle"
-                    href="#"
+                    href=""
                     data-bs-toggle="dropdown">
                     About Us
                   </a>
@@ -46,7 +46,7 @@ function header() {
                 <li class="nav-item dropdown">
                   <a
                     class="nav-link dropdown-toggle"
-                    href="#"
+                    href=""
                     data-bs-toggle="dropdown">
                     Our Team
                   </a>

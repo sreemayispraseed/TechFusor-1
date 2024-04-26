@@ -5,7 +5,7 @@ function footer() {
   return (
     <div>
       <footer class="bg-dark text-inverse">
-        <div class="container py-13 py-md-15">
+        <div class="container py-5 py-md-10">
           <div class="row gy-6 gy-lg-0">
             <div class="col-lg-4">
               <div class="widget">
