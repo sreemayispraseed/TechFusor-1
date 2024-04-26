@@ -20,12 +20,14 @@ function footer() {
                 </h3>
                 <p class="lead mb-5">
                   Our tech-loving community is buzzing with discussions,
-                  projects, and good vibes. Jump into the conversation on our
-                  Discord server: [Discord Channel URL]. We're not just a
-                  community; we're a squad of tech pals ready to share
-                  knowledge, collaborate on projects, and geek out together.
+                  projects, and good vibes. We're not just a community; we're a
+                  squad of tech pals ready to share knowledge, collaborate on
+                  projects, and geek out together.
                 </p>
-                <a href="#" class="btn  btn-primary rounded-pill">
+                <a
+                  href="https://discord.gg/SjHYaSw2"
+                  target="_blank"
+                  class="btn  btn-primary rounded-pill">
                   Join Us
                 </a>
               </div>
@@ -91,13 +93,13 @@ function footer() {
                 <i class="uil uil-twitter"></i>
               </a>
 
-              <a href="#">
+              <a href="https://github.com/TechFusor" target="_blank">
                 <i class="uil uil-github"></i>
               </a>
               <a href="#">
                 <i class="uil uil-linkedin"></i>
               </a>
-              <a href="#">
+              <a href="https://discord.gg/SjHYaSw2" target="_blank">
                 <i class="uil uil-discord"></i>
               </a>
             </nav>

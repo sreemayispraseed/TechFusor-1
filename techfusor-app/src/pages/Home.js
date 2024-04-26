@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../components/header";
 import Footer from "../components/footer";
-import bg2 from "../assets-n/img/background/home-bg-3.jpg";
+import bg2 from "../assets-n/img/background/home-bg-2.jpg";
 import Teams from "../components/teams";
 import "../style/global.css";
 
@@ -23,7 +23,7 @@ function Home() {
       <Header />
       <section className="wrapper bg-dark ">
         <div
-          className="wrapper image-wrapper bg-cover bg-image bg-overlay bg-overlay-300 bg-sec"
+          className="wrapper image-wrapper bg-cover bg-image bg-overlay bg-overlay-400 bg-sec"
           style={{ backgroundImage: `url(${bg2})` }}>
           <div className="container h-100">
             <div className="row h-100">
