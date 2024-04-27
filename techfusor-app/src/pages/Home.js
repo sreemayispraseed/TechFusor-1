@@ -54,27 +54,29 @@ function Home() {
       <section className="wrapper bg-light  lower-end">
         <div className="container py-10 py-md-16">
           <div className="row gx-lg-8 gx-xl-12 gy-10  ">
-            <div className="col-lg-6 position-relative order-lg-2">
+            <div className="col-lg-6 position-relative order-lg-2 animate__animated animate__slideInLeft animate__delay-2s">
               <div className="abt-img">
                 <figure className="">
                   <img src={aboutus} alt="" />
                 </figure>
               </div>
             </div>
-            <div className="col-lg-6">
-              <h2 className="display-4 mb-3">Who Are We?</h2>
-              <p className="lead fs-lg">
+            <div className="col-lg-6 ">
+              <h2 className="display-4 mb-3 animate__animated animate__slideInDown animate__delay-1s">
+                Who Are We?
+              </h2>
+              <p className="lead fs-lg animate__animated animate__slideInLeft animate__delay-2s">
                 We are a digital and branding company that believes in the power
                 of creative strategy and along with great design.
               </p>
-              <p className="mb-6">
+              <p className="mb-6 animate__animated animate__slideInLeft animate__delay-2s">
                 Cum sociis natoque penatibus et magnis dis parturient montes,
                 nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis
                 in, egestas eget quam. Praesent commodo cursus magna, vel
                 scelerisque nisl consectetur et.
               </p>
-              <div className="row gy-3 gx-xl-8">
-                <div className="col-xl-6">
+              <div className="row gy-3 gx-xl-8 animate__animated animate__slideInLeft animate__delay-2s">
+                <div className="col-xl-6 ">
                   <ul className="icon-list bullet-bg bullet-soft-primary mb-0">
                     <li>
                       <span>
@@ -123,13 +125,13 @@ function Home() {
       <section className="wrapper bg-light  lower-end">
         <div className="container pb-10 pb-md-16">
           <div className="row gx-lg-8 gx-xl-12 gy-10 ">
-            <div className="col-md-10 col-xl-8 col-xxl-7 mx-auto text-center">
+            <div className="col-md-10 col-xl-8 col-xxl-7 mx-auto text-center animate__animated animate__slideInDown animate__delay-1s">
               <h2 className="display-4 mb-2 px-lg-14">
                 Check Out Our Projects
               </h2>
             </div>
 
-            <div className="row gx-lg-8 gx-xl-12 gy-6 align-items-center">
+            <div className="row gx-lg-8 gx-xl-12 gy-6 align-items-center animate__animated animate__slideInLeft animate__delay-2s">
               <div className="col-lg-6 order-lg-2">
                 <div className="card me-lg-6">
                   <div className="card-body p-6">
@@ -216,7 +218,7 @@ function Home() {
       <section className="wrapper bg-light" id="teams">
         <div className="container pb-14 pb-md-16">
           <div className="row mb-3">
-            <div className="col-md-10 col-xl-9 col-xxl-7 mx-auto text-center">
+            <div className="col-md-10 col-xl-9 col-xxl-7 mx-auto text-center animate__animated animate__slideInLeft animate__delay-2s">
               <h2 className="display-4 mb-3 px-lg-14">Our Team</h2>
             </div>
           </div>
